@@ -23,6 +23,7 @@ describe 'Feature Test: User Signup', :type => :feature do
   it 'successfully logs in as non-admin' do
     visit_signin
     expect(current_path).to eq('/signin')
+    # binding.pry
     user_login
     expect(current_path).to eq('/users/1')
     expect(page).to have_content("Mindy")

@@ -1,0 +1,13 @@
+<% if flash[:message] %>
+<%= flash[:message] %>
+<% end %>
+
+
+Name: <%= @user.name %><br>
+Tickets: <%= @user.tickets %><br>
+Height: <%= @user.height %><br>
+Mood: <%= @user.mood %><br>
+<%= @user.admin? %><br>
+<%= link_to edit_user_path(@user) %><br>
+<%= link_to "See attractions", attractions_path %><br>
+<%= link_to "Log Out", logout_path, :method => :delete %>

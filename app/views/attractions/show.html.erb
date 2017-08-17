@@ -1,0 +1,7 @@
+<%= @attraction.name %>
+
+<%= button_to "Go on this ride", take_ride_path(@attraction), method: :get, id: "Go on this ride" %>
+
+<% if @user.admin %>
+<p> <%= link_to "Edit Attraction", edit_attraction_path(@attraction) %> </p>
+<% end %>
